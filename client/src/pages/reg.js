@@ -18,7 +18,7 @@ function Reg() {
   });
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/auth", data).then((response) => {
+    axios.post("https://blog-b1g5.onrender.com/auth", data).then((response) => {
       console.log(data);
       
       if (response.data.error) {  // all errors will come here, will be only true when there is a error

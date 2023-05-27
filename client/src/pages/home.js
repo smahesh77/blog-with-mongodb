@@ -10,7 +10,7 @@ function Home() {
     let history = useHistory();// ecaxtly like navigator
 
     useEffect(() => {
-        axios.get("http://localhost:3001/posts").then((response) => {
+        axios.get("https://blog-b1g5.onrender.com/posts").then((response) => {
             setListOfPosts(response.data)// this will somehow send the data to listpost, dw about it now
         })
     }, []);

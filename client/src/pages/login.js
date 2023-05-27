@@ -14,7 +14,7 @@ function Login() {
 
   const login = () => {
     const data = { username: username, password: password };
-    axios.post("http://localhost:3001/auth/login", data).then((response) => {
+    axios.post("https://blog-b1g5.onrender.com/auth/login", data).then((response) => {
       if (response.data.error) {  // all errors will come here, will be only true when there is a error
         alert(response.data.error);
       } else {// use else or it  will create an empty token in storage

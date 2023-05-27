@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     axios // this will verify the token in the server to set the auth state and returns username and all that
-      .get("http://localhost:3001/auth/logchek", {
+      .get("https://blog-b1g5.onrender.com/auth/logchek", {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },

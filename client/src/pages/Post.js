@@ -20,11 +20,11 @@ function Post() {
     const { authState } = useContext(AuthContext)
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/posts/byId/${id}`).then((response) => {
+        axios.get(`https://blog-b1g5.onrender.com/posts/byId/${id}`).then((response) => {
             setPostObject(response.data);// sends to postobject
         });
 
-        axios.get(`http://localhost:3001/comments/${id}`).then((response) => {
+        axios.get(`https://blog-b1g5.onrender.com/comments/${id}`).then((response) => {
             setcommentObject(response.data);
           });
 
@@ -32,7 +32,7 @@ function Post() {
     }, []); // always put [] and the states in which you want to rerun the api requests never leave empty(just put[])
 
     const addComment = () => {
-        axios.post(`http://localhost:3001/comments`, {
+        axios.post(`https://blog-b1g5.onrender.com/comments`, {
             commentBody: newComment, PostId: id, tokentest: localStorage.getItem("accessToken")// to get token from session storage
         },
             {
@@ -70,7 +70,7 @@ function Post() {
 
     const deleteComment = (commentId) => {
         axios
-          .delete(`http://localhost:3001/comments/${commentId}`, {
+          .delete(`https://blog-b1g5.onrender.com/comments/${commentId}`, {
             headers: { accessToken: localStorage.getItem("accessToken") },
           })
           .then((response) => {

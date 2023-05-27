@@ -14,7 +14,7 @@ function CreatePost() {
 
     const onSubmit = (data) => {
 
-        axios.post("http://localhost:3001/posts", data).then((response) => {// sends the data to server 
+        axios.post("https://blog-b1g5.onrender.com/posts", data).then((response) => {// sends the data to server 
             if (response.data.error) {
                 alert("You are not Authorized, please log in!")
                 history.push("/log");
